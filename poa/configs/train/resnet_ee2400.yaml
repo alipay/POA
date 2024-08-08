@@ -1,0 +1,14 @@
+# Copyright 2024 Ant Group.
+# this corresponds to the default config
+train:
+  dataset_path: ImageNet:split=TRAIN
+  OFFICIAL_EPOCH_LENGTH: 1000
+  batch_size_per_gpu: 40  # 32 gpus
+crops:
+  local_crops_number: 8
+optim:
+  epochs: 692 # effective epochs: 2400
+  warmup_epochs: 30
+  ibot_activate_epochs: 30
+evaluation:
+  eval_period_iterations: 55360 # total iter: 216250 * 2 = 432500
